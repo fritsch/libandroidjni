@@ -237,3 +237,10 @@ int CJNIAudioTrack::getLatency()
   }
   return call_method<int>(m_object, "getLatency", "()I");
 }
+
+int CJNIAudioTrack::getUnderrunCount()
+{
+  if (CJNIBase::GetSDKVersion() >= 24)
+    return call_method<int>(m_object, "getUnderrunCount", "()I");
+  return 0;
+}

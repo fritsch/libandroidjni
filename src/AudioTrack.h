@@ -62,6 +62,7 @@ class CJNIAudioTrack : public CJNIBase
     bool  getTimestamp (CJNIAudioTimestamp &timestamp);
     int   getBufferSizeInFrames();
     int   getLatency();
+    int   getUnderrunCount();
 
     static int  MODE_STREAM;
     static int  STATE_INITIALIZED;
